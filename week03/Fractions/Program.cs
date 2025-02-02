@@ -1,9 +1,36 @@
 using System;
+using System.Runtime.InteropServices.Marshalling;
 
 class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello World! This is the Fractions Project.");
+        Fraction frac1 = new Fraction();
+
+        Console.WriteLine(frac1.GetFractionString());
+        Console.WriteLine(frac1.GetDecimalValue());
+
+        Fraction frac2 = new Fraction(5);
+        Console.WriteLine(frac2.GetFractionString());
+        Console.WriteLine(frac2.GetDecimalValue());
+
+        Fraction frac3 = new Fraction(3, 4);
+        Console.WriteLine(frac3.GetFractionString());
+        Console.WriteLine(frac3.GetDecimalValue());
+
+        Fraction frac4 = new Fraction(1, 3);
+        Console.WriteLine(frac4.GetFractionString());
+        Console.WriteLine(frac4.GetDecimalValue());
+
+        // testing getters and setters
+
+        // Fraction frac5 = new Fraction(); 
+        // Console.WriteLine(frac5.GetTop());
+        // Console.WriteLine(frac5.Getbottom());
+        // frac5.SetTop(5);
+        // frac5.SetBottom(6);
+        // Console.WriteLine(frac5.GetTop());
+        // Console.WriteLine(frac5.Getbottom());
+
     }
 }
